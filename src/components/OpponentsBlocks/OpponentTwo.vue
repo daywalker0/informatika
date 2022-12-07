@@ -36,4 +36,9 @@
 	}
 }
 
+@media (max-width: 1440px) {
+	.opponentTwo {
+		width: 530px;
+	}
+}
 </style>

@@ -1,10 +1,12 @@
 {
-  "name": "test-informatika",
+  "name": "informatika",
   "version": "0.1.0",
+	"homepage": "https://testsite.github.io/informatika/",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+		"github": "gh-pages -d dist"
   },
   "dependencies": {
     "reset-css": "^5.0.1",
