@@ -1,0 +1,60 @@
+// Миксин для пвсевдоэлементов
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+// Миксин для цвета placeholder
+@mixin placeholder--color($cl) {
+	&::-webkit-input-placeholder {color:$cl;}
+	&::-moz-placeholder {color:$cl;}
+	&:-moz-placeholder {color:$cl;}
+	&:-ms-input-placeholder {color:$cl;}
+}
+
+// Миксин для плавного исчезания placeholder в input
+@mixin placeholder--opacity {
+	&::-webkit-input-placeholder {opacity: 1;transition: opacity 0.3s ease;}
+	&::-moz-placeholder {opacity: 1;transition: opacity 0.3s ease}
+	&:-moz-placeholder {opacity: 1;transition: opacity 0.3s ease}
+	&:-ms-input-placeholder {opacity: 1;transition: opacity 0.3s ease}
+	&:focus::-webkit-input-placeholder {opacity: 0;transition: opacity 0.3s ease}
+	&:focus::-moz-placeholder {opacity: 0;transition: opacity 0.3s ease;}
+	&:focus:-moz-placeholder {opacity: 0;transition: opacity 0.3s ease;}
+	&:focus:-ms-input-placeholder {opacity: 0;transition: opacity 0.3s ease;}
+}
+
+// Миксин для кроссбраузеного скругления
+@mixin br($rad) {
+	-webkit-border-radius: $rad;
+	-moz-border-radius: $rad;
+	-ms-border-radius: $rad;
+	border-radius: $rad;
+}
+
+// Миксин для фона
+@mixin background--img($backg--url, $backg--repeat, $backg--size) {
+	background: url($backg--url);
+	background-repeat: $backg--repeat;
+	-webkit-background-size: $backg--size;
+	-moz-background-size: $backg--size;
+	-o-background-size: $backg--size;
+	background-size: $backg--size;
+}
+
+// Миксин для шрифта
+@mixin font($ff, $fw, $fs, $lh, $fc){
+	font-family: $ff, sans-serif;
+	font-weight: $fw;
+	font-size: $fs;
+	line-height: $lh;
+	color: $fc;
+}
+
+// Миксин для центрирования flex
+@mixin center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
